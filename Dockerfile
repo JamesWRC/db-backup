@@ -111,4 +111,5 @@ COPY install  /
 # Volumes: 
 #   - 'db_backup' is a local directory to store backups
 #   - 'backup' is a container directory to store backups
-VOLUME /db_backup /backup
+# This is stored in Railway.app template
+# VOLUME /db_backup /backup
