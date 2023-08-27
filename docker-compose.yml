@@ -3,13 +3,15 @@ services:
   db-backup:  
     build: 
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.db_backup
     container_name: db-backup
     volumes:
       - /db_backup:/backup
 
   file-server:
-    image: filebrowser/filebrowser
+    build: 
+      context: .
+      dockerfile: Dockerfile.file_server
     container_name: file-server
     ports:
       - 8080:80
