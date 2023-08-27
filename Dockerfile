@@ -108,5 +108,7 @@ RUN source /assets/functions/00-container && \
 
 COPY install  /
 
-# Volumes
-VOLUME ["/backup"]
+# Volumes: 
+#   - 'db_backup' is a local directory to store backups
+#   - 'backup' is a container directory to store backups
+VOLUME /db_backup /backup
