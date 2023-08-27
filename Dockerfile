@@ -8,6 +8,8 @@ COPY --from=file-server /healthcheck.sh ./healthcheck.sh
 COPY --from=file-server /filebrowser ./filebrowser
 
 ENV FB_ADDRESS=0.0.0.0
+ENV FB_PORT=80
+
 ENV DB_DUMP_TARGET=/srv/db_backup
 EXPOSE 80
 # Volumes: 
