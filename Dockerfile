@@ -11,7 +11,7 @@ ENV FB_ADDRESS=0.0.0.0
 ENV FB_PORT=80
 
 ENV DB_DUMP_TARGET=/srv/db_backup
-EXPOSE 80
+EXPOSE 80:80
 # Volumes: 
 #   - 'db_backup' is a local directory to store backups
 #   - 'backup' is a container directory to store backups
