@@ -5,7 +5,13 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: db-backup
-    links:
-     - strapidb:strapidb
     volumes:
       - /db_backup:/backup
+
+  file-server:
+    image: filebrowser/filebrowser
+    container_name: file-server
+    ports:
+      - 8080:80
+    volumes:
+      - /db_backup:/srv
