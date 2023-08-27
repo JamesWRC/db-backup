@@ -107,3 +107,6 @@ RUN source /assets/functions/00-container && \
 
 
 COPY install  /
+
+# Volumes
+VOLUME ["/backup"]
